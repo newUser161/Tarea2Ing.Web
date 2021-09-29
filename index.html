@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html lang="en"> 
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Formulario Lenguajes de Programacion</title>
+        <meta name="description" content="Es una encuesta sobre el nivel que tienen los alumnos de la Escuela de Ingenieria Informatica sobre lenguajes de programacion">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">        
+        <link rel="stylesheet" href="css/estilos.css">
+        
+        
+    </head>
+    <body>
+        <header class="cabecera">
+            <h1>Formulario sobre lenguajes de programación</h1>
+            <p>Los campos con * son obligatorios</p><br>
+        </header>
+        <section id="seccionFormulario">
+            <div class="container rounded">
+            <form class="needs-validation " novalidate onsubmit="enviarDatos()" id="formulario" method="POST">
+                <div class="row contenedor contenedor">
+                <div id="datosPersonales">
+                    <h2>Ingrese sus datos</h2>
+                    <div class="form-group">                    
+                        <input type="text" class="form-control" id="nombreCompleto" placeholder="Nombre completo *" required>                        
+                        <div class="invalid-feedback">
+                            Debe ingresar su nombre
+                        </div><br>
+                    </div>                
+                    <div class="form-group">                    
+                        <input type="text" class="form-control" id="rut" aria-describedby="rutHelp" placeholder="RUT XXXXXXXX-X *" pattern="[0-9|kK|-]{10}" required>
+                        <small id="rutHelp" class="form-text text-muted">El rut debe ser sin puntos y con guión.</small>
+                        <div class="invalid-feedback">
+                            Rut invalido
+                        </div>
+                    </div>
+                    <div class="form-group">                    
+                        <br><input type="email" class="form-control" id="correo" placeholder="Correo electrónico *" required>
+                        <div class="invalid-feedback">
+                            Debe ingresar su correo electronico
+                        </div><br>
+                    </div>                    
+                    <div class="form-group">
+                        <input type="number" class="form-control" id="telefono" aria-describedby="telefonoHelp" placeholder="Teléfono *" min="99999999" max="999999999"  required>
+                        <small id="telefonoHelp" class="form-text text-muted">Formato: 9XXXXXXXX.</small>
+                        <div class="invalid-feedback">
+                            Debe ingresar su numero telefonico
+                        </div><br><br>                        
+                    </div>
+                </div>                
+                </div>
+                <div id="datosConocimiento">    
+                    <div class="row contenedor">
+                    <h2>Seleccione uno o mas lenguajes de programación de su interés *</h2>
+                    <div class="form-check align-items-center">
+                        <input class="form-check-input" type="checkbox" value="python" id="lenguajes_py" name="check_language">
+                        <label class="form-check-label" for="lenguajes_py">
+                            Python
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="typescript" id="lenguajes_ts" name="check_language">
+                        <label class="form-check-label" for="lenguajes_ts">
+                            TypeScript
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="c++" id="lenguajes_c++" name="check_language">
+                        <label class="form-check-label" for="lenguajes_c++">
+                            C++
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="c#" id="lenguajes_c#" name="check_language">
+                        <label class="form-check-label" for="lenguajes_c#">
+                            C#
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="php" id="lenguajes_php" name="check_language">
+                        <label class="form-check-label" for="lenguajes_php">
+                            PHP
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="ror" id="lenguajes_ror" name="check_language">
+                        <label class="form-check-label" for="lenguajes_ror">
+                            Ruby on Rails
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="java" id="lenguajes_java" name="check_language">
+                        <label class="form-check-label" for="lenguajes_java">
+                            Java
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="r" id="lenguajes_r" name="check_language">
+                        <label class="form-check-label" for="lenguajes_r">
+                            R
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="groovy" id="lenguajes_groovy" name="check_language">
+                        <label class="form-check-label" for="lenguajes_groovy">
+                            Groovy
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="go" id="lenguajes_go" name="check_language">
+                        <label class="form-check-label" for="lenguajes_go">
+                            Go
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="swift" id="lenguajes_swift" name="check_language">
+                        <label class="form-check-label" for="lenguajes_swift">
+                            Swift
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="kotlin" id="lenguajes_kotlin" name="check_language">
+                        <label class="form-check-label" for="lenguajes_kotlin">
+                            Kotlin
+                        </label>
+                        <div class="invalid-feedback">
+                            Debe seleccionar al menos una opcion
+                        </div><br>
+                    </div>
+                    </div>     
+                    <div class="row contenedor">
+                    <br><h2>Cual es su nivel de experiencia en programación? *</h2>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="radio_experiencia" id="experiencia_alto" value="alto" required>
+                        <label class="form-check-label" for="experiencia_alto">
+                            Alto
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="radio_experiencia" id="experiencia_medio" value="medio" checked required>
+                        <label class="form-check-label" for="experiencia_medio">
+                            medio
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="radio_experiencia" id="experiencia_bajo" value="bajo" required>
+                        <label class="form-check-label" for="experiencia_bajo">
+                            bajo
+                        </label>
+                    </div>
+                    </div>
+                    <div class="row contenedor">
+                    <br><h2>Cual es su nivel de conocimiento sobre los siguientes lenguajes? *</h2>
+                    <div>
+                        <label for="conocimientoPy">Conocimiento en Python</label><br>
+                        <input type="range" class="custom-range" min="0" max="10" id="conocimientoPy" value="5" required >         
+                    </div>
+                    <div>
+                        <label for="conocimientoJava">Conocimiento en Java</label><br>
+                        <input type="range" class="custom-range" min="0" max="10" id="conocimientoJava" value="5" required>         
+                    </div>
+                    <div>
+                        <label for="conocimientoC++">Conocimiento en C++</label><br>
+                        <input type="range" class="custom-range" min="0" max="10" id="conocimientoC++" value="5" required>   
+                    </div>
+                    </div>   
+                    <div class="row contenedor">
+                    <br><h2>Seleccione cual de los siguientes cursos le ha sido de  mayor dificultad *</h2>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="estructuraDatos" id="estructura_datos" name="check_curso">
+                        <label class="form-check-label" for="estructura_datos">
+                            Estructura de Datos
+                        </label>
+                    </div>                        
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="inteligenciaArtificial" id="IA" name="check_curso">
+                        <label class="form-check-label" for="IA">
+                            Inteligencia Artificial
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="interaccionHumanoComputador" id="interaccionHC" name="check_curso">
+                        <label class="form-check-label" for="interaccionHC">
+                            Interaccion Humano Computador
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="sistemasOperativos" id="SO" name="check_curso">
+                        <label class="form-check-label" for="SO">
+                            Sistemas Operativos
+                        </label>
+                    </div>
+                    <div class="form-group">                    
+                        <input type="text" class="form-control" id="otro" placeholder="Otro" value="">                
+                        <div class="invalid-feedback">
+                            Debe seleccionar al menos una opcion
+                        </div><br>
+                    </div>                    
+                    <br><h2>Cual es su opinión sobre la escuela *</h2>                    
+                    <div class="form-group">                
+                        <textarea class="form-control" id="opinionEscuela" row contenedors="3" maxlength="500" required></textarea>
+                    </div>
+                    </div>
+                    <div class="botones">
+                        <br><button type="submit" class="btn btn-primary" id="botonSubmit">Enviar</button>
+                        <button type="button" onclick="limpiarDatos()" class="btn btn-primary" id="botonReset">Limpiar Datos</button>
+                    </div>
+                </div>
+                
+            </form>
+            </div>
+        </section>  
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script data-main="js/inicio.js" src="js/require-jquery.js" async></script> 
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous" async></script>        
+        
+    </body>
+</html>

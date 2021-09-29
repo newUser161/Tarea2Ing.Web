@@ -1,0 +1,79 @@
+.contenedor {
+    h2{
+        text-align: center;
+        color: rgb(190, 190, 190);
+    }
+    div{text-align: center;}
+    
+    input{
+        max-width: 60%;
+        margin: 0 auto;
+        text-align: center;        
+        font-size: large;
+        background-color: #505967;
+        color: rgb(255, 255, 255);            
+        align-items: center;
+    }    
+    textarea{
+        background-color: #505967; 
+        color: white;
+       }
+    label{color: white;}
+    
+    max-width: 80%;
+    margin: 0 auto;
+    background-color:rgba($color: #464e5b, $alpha: 0.3);
+    color: black;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    padding-top: 2%;      
+
+    .form-check{
+        label{
+            float: left;
+        }
+        padding-left: 40%;
+    }
+    
+}
+.cabecera {
+    text-align: center;
+    background-color:rgba($color: #1e1f22, $alpha: 0.4);
+    margin-top: 4%;
+    color: rgb(151, 151, 151);
+    margin-bottom: 4%;
+    padding-top: 2%;
+    max-width: 80%;
+    margin: 0 auto;
+    
+}
+
+body{
+    background: rgb(35,40,46);
+    background: linear-gradient(90deg, rgba(35,40,46,1) 0%, rgba(62,70,82,1) 47%, rgba(35,40,46,1) 100%); }
+.form-control:focus {
+    border-color: #b3b3b3;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(223, 223, 223, 0.6);
+    background-color: #505967;
+    color: white;
+  }
+  .form-control::placeholder { 
+    color: rgb(163, 163, 163);
+    opacity: 1; 
+}
+
+.form-control:-ms-input-placeholder {
+    color: rgb(163, 163, 163);
+}
+
+.form-control::-ms-input-placeholder {
+    color: rgb(170, 170, 170);
+}
+
+.botones{
+    max-width: 80%;
+    margin: 0 auto;    
+    color: black;    
+    padding-left: 3%;
+    padding-bottom: 1%;
+}
